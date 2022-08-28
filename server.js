@@ -3,9 +3,7 @@ const http = require("http"),
   port = 3000;
 
 const server = http.createServer(function (request, response) {
-  console.log("REQUEST: " + request.url);
   const parsed = "." + request.url;
-  console.log("PARSED: " + parsed);
   switch (parsed) {
     case "./":
       sendFile(response, "home.html");

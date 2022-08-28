@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <div class="header" >
+    <header >
       <h1 class = "topTitle">Michael O'Connor</h1>
       <ul class="navBar">
           <li class="navLink"><a href="home.html">Home</a></li>
@@ -15,34 +15,90 @@
           <li class="navLink"><a href="Work.html" >Work</a></li>
           <li class="navLink"><a href="Other.html" >Other</a></li>
       </ul>
-    </div>
-    <div class="main">
+    </header>
+    <main>
       <div class="funfacts">
         <h3>Other Facts</h3>
+        <ul class="otherList">
+          <li class="factItem"> Animals that hatch from eggs don't have belly buttons</li>
+          <li class="factItem"> Sonic the Hedgehog’s full name is Ogilvie Maurice Hedgehog.</li>
+          <li class="factItem"> Fish cough</li>
+          <li class="factItem">Elephants are the only mammal that can’t jump</li>
+        </ul>
       </div>
       <div class="Sources">
         <h3> Sources</h3>
-        <ul class="sourceList">
+        <ul class="otherList">
           <li>
-            <a href="https://www.smartscholarship.org/smart?id=sponsoring_facilities"> DoD Internship Description</a>
+            <a class="source" href="https://www.smartscholarship.org/smart?id=sponsoring_facilities"> DoD Internship Description</a>
           </li>
           <li>
-            <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/17851/computer-science">WPI Course Descriptions</a>
+            <a class="source" href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/17851/computer-science"> WPI Course Descriptions</a>
           </li>
           <li>
-            <a href="https://lyft-colorbox.herokuapp.com">Palette Selector</a>
+            <a class="source" href="https://lyft-colorbox.herokuapp.com"> Palette Selector</a>
           </li>
           <li>
-            <a href="https://www.w3schools.com/howto/howto_js_collapsible.asp"> Collapsible JS Code Reference</a>
+            <a class="source" href="https://www.w3schools.com/howto/howto_js_collapsible.asp"> Collapsible JS Code Reference</a>
+          </li>
+          <li>
+            <a class="source" href="https://parade.com/1019661/marynliles/wtf-facts/"> Facts Source</a>
           </li>
         </ul>
       </div>
-    </div>
+      <div class="duck">
+        <h4>Need a Duck?</h4>
+        <div class="duckRow">
+          <button class="btn" id="duckBtn">YES</button>
+        </div>
+        <div class="duckRow">
+          <div class="duckGif" id="duck">
+            <iframe src="https://giphy.com/embed/82nxC1u2BC8VU1wiZq" width="335" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/duck-cuteness-baby-82nxC1u2BC8VU1wiZq">via GIPHY</a></p>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <footer>
-      <p>
-        Michael O'Connor<br>CS 4231 Webware<br>Assignment 1
-      </p>
+      <h5>
+        Michael O'Connor<br>CS 4241 Webware<br>Assignment 1
+      </h5>
     </footer>
+
+    <script>
+      const coll = document.getElementsByClassName("btn");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = document.getElementById("duck");
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.innerText = "YES"
+
+            } else {
+              this.innerText = "Too much cuteness!";
+              content.style.display = "block";
+              const start = Date.now();
+              let timer = setInterval(function(){
+                let elapsed = Date.now() - start;
+                if(elapsed > 500){
+                  clearInterval(timer)
+                  return;
+                }
+                draw(elapsed);
+              }, 20);
+              function draw(elapsed){
+                let rand = (Math.random()*0.3+0.00001)
+                content.style.transform = 'rotate('+(elapsed*rand) + 'deg)';
+              }
+            }
+        });
+      }
+    </script>
+
+
+
   </body>
 </html>

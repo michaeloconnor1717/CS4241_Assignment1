@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <div class="header">
+    <header>
       <h1 class="topTitle">Michael O'Connor</h1>
       <ul class="navBar">
         <li class="navLink"><a href="home.html">Home</a></li>
@@ -15,17 +15,16 @@
         <li class="navLink"><a href="Work.html">Work</a></li>
         <li class="navLink"><a href="Other.html">Other</a></li>
       </ul>
-    </div>
-    <div class="main">
+    </header>
+    <main>
       <h2>WPI Class of 2024</h2>
       <div class="summary">
         <p>
           I am a transfer student from Arkansas that is wrapping up his Computer
-          Science BS degree this year. <br/>
+          Science BS degree this year. <br />
           Next year, I'll be continuing to attend WPI for an MS in Computer
           Science.
         </p>
-        <p>Major: Computer Science</p>
       </div>
       <h2>WPI Course List</h2>
       <ul class="courseList">
@@ -190,14 +189,86 @@
 
       <h2>Language List</h2>
       <ul class="courseList">
-        <li class="collapsible">C/C++</li>
-        <li class="collapsible">Java</li>
-        <li class="collapsible">Python</li>
-        <li class="collapsible">SQL/MySQL</li>
-        <li class="collapsible">HTML</li>
-        <li class="collapsible">CSS</li>
+        <li>
+          <button class="collapsible">C/C++</button>
+          <div class="content">
+            <p>A lot of experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">Java</button>
+          <div class="content">
+            <p>A lot of experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">Python</button>
+          <div class="content">
+            <p>A lot of experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">SQL/MySQL</button>
+          <div class="content">
+            <p>A fair amount of experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">HTML</button>
+          <div class="content">
+            <p>Some experience before this class</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">CSS</button>
+          <div class="content">
+            <p>Some experience before this class</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">PHP</button>
+          <div class="content">
+            <p>No experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">Ruby</button>
+          <div class="content">
+            <p>No experience</p>
+          </div>
+        </li>
       </ul>
-    </div>
+
+      <h2>Development Practices</h2>
+      <ul class="courseList">
+        <li>
+          <button class="collapsible">Unit Testing</button>
+          <div class="content">
+            <p>Some experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">Test Driven Development</button>
+          <div class="content">
+            <p>A lot of experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">Agile Development</button>
+          <div class="content">
+            <p>A lot of experience</p>
+          </div>
+        </li>
+        <li>
+          <button class="collapsible">Scale Agile Framework</button>
+          <div class="content">
+            <p>Some experience</p>
+            <p>SAFe 5.1 Certified</p>
+          </div>
+        </li>
+
+      </ul>
+    </main>
 
     <script>
       var coll = document.getElementsByClassName("collapsible");
@@ -217,7 +288,7 @@
       }
     </script>
     <footer>
-      <p>Michael O'Connor<br />CS 4231 Webware<br />Assignment 1</p>
+      <h5>Michael O'Connor<br />CS 4241 Webware<br />Assignment 1</h5>
     </footer>
   </body>
 </html>

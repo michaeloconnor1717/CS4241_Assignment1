@@ -1,3 +1,60 @@
-.sourceList{
-    padding-left: 4%;
+
+
+.otherList{
+    padding-top: 0.5%;
+    padding-left: 2%;
+    list-style:none;
+}
+
+.factItem{
+    color: #000000;
+    margin-bottom: 0.5%;
+
+}
+
+.factItem::before{
+    content:"\2022";
+    color: #6774EF;
+    font-size: 20px;
+}
+
+a.source::before{
+    content:"\2022";
+    color: #7446DE;
+    font-size: 20px;
+
+}
+
+a.source:any-link{
+    color: #7446DE
+}
+
+.duck{
+
+    display: table;
+}
+.duckRow{
+    display: table-row;
+}
+.duckGif{
+    display: none;
+}
+button:active{
+    content: "Too much cuteness";
+}
+
+h4{
+    padding: 2% 0%;
+}
+
+.btn{
+    margin-left: 6%;
+    font-size: larger;
+    border: 0.1%;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #7446DE;
+    background-color: white;
+    padding: 1%;
+    color: #7446DE
 }
