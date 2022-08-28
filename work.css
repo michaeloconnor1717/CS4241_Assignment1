@@ -1,0 +1,16 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.exp{
+    width: 98%;
+    margin: auto;
+    list-style: square;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
+
+.expListItem{
+    padding-top: 2%;
+}

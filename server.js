@@ -1,25 +1,30 @@
-const http = require('http'),
-      fs   = require('fs'),
-      port = 3000
+const http = require("http"),
+  fs = require("fs"),
+  port = 3000;
 
-const server = http.createServer( function( request,response ) {
-  switch( request.url ) {
-    case '/':
-      sendFile( response, 'index.html' )
-      break
-    case '/index.html':
-      sendFile( response, 'index.html' )
-      break
+const server = http.createServer(function (request, response) {
+  console.log("REQUEST: " + request.url);
+  const parsed = "." + request.url;
+  console.log("PARSED: " + parsed);
+  switch (parsed) {
+    case "./":
+      sendFile(response, "home.html");
+      break;
     default:
-      response.end( '404 Error: File Not Found' )
+      sendFile(response, parsed);
+      break;
   }
-})
+  response.write;
+});
 
-server.listen( process.env.PORT || port )
+server.listen(process.env.PORT || port);
 
-const sendFile = function( response, filename ) {
-   fs.readFile( filename, function( err, content ) {
-     file = content
-     response.end( content, 'utf-8' )
-   })
-}
+const sendFile = function (response, filename) {
+  fs.readFile(filename, function (err, content) {
+    if (err != null && err.code === "ENOENT") {
+      response.end("404: No Page Found");
+      return console.error(err);
+    }
+    response.end(content, "utf-8");
+  });
+};

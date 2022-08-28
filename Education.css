@@ -1,0 +1,36 @@
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.collapsible{
+    
+    margin-bottom: 0.5%;
+    color: white;
+    font-size: 14px;
+    border-radius: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #6B78F7;
+    text-align: left;
+    padding: 1%;
+    justify-content: center;
+
+}
+
+.content{
+    display: none;
+    overflow: hidden;
+    width: 98%;
+    margin: auto;
+}
+
+.courseList{
+    list-style: none;
+}
+
+.summary{
+    margin: auto;
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
