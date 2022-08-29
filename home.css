@@ -1,0 +1,13 @@
+li.page::before{
+    content:"\2022";
+    color: #7446DE;
+    vertical-align: middle;
+    font-size: 24px;
+
+}
+li.page{
+    margin-left: 3%;
+}
+ul{
+    list-style: none;
+}
