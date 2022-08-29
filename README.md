@@ -1,5 +1,7 @@
 # Michael O'Connor CS4241 Assigment 1
 
+[Glitch Link](https://a1-michaeloconnor1717.glitch.me)
+
 This project shows a simple resume-like website based on my experiences and education. 
 The purpose of the site is to demonstrate my ability to use Git, Github, HTML, CSS, basic JS, and Glitch
 
