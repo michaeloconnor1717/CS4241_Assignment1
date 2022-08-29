@@ -29,7 +29,7 @@ header{
 
 .topTitle{
 
-    height: 50%;
+    
     min-height: fit-content;
     font-family: 'Varela Round', sans-serif;
     font-size: 24px;
@@ -68,11 +68,6 @@ header{
 
 
 }
-.navLink:hover, .navLink:hover a{
-    background-color: #08415C;
-    color: #FFFFFF;
-
-}
 
 a:link, a:visited{
     color: #101010;
@@ -81,6 +76,14 @@ a:link, a:visited{
     font-size: medium;
 }
 
+.navLink:hover, .navLink:hover a{
+    background-color: #08415C;
+    color: #FFFFFF;
+
+}
+
+
+
 footer{
     margin-top: auto;
     padding-top: 3%;
@@ -88,7 +91,6 @@ footer{
     background-color: #91B3FC;
     width: 100%;
     min-height: fit-content;
-    height: 5%;
 }
 
 
